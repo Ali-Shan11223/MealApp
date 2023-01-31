@@ -5,12 +5,12 @@ class CategoryItem extends StatelessWidget {
   final String id;
   final String title;
   final Color color;
-  const CategoryItem({super.key, required this.title, required this.color, required this.id});
+  const CategoryItem(
+      {super.key, required this.title, required this.color, required this.id});
 
   void selectCategory(BuildContext context) {
-    Navigator.of(context).pushNamed('/mealsScreen', arguments: {
-      'id': id, 'title' : title
-    });
+    Navigator.of(context)
+        .pushNamed(MealScreen.routeName, arguments: {'id': id, 'title': title});
   }
 
   @override

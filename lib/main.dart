@@ -33,9 +33,10 @@ class MyApp extends StatelessWidget {
           onSurface: Colors.white,
         ),
       ),
-      home: const CategoriesScreen(),
+      initialRoute: '/',
       routes: {
-        '/mealsScreen' : (context) => MealScreen()
+        '/' : (context) => const CategoriesScreen(),
+        MealScreen.routeName : (context) => const MealScreen()
       },
     );
   }
