@@ -67,7 +67,6 @@ class _MyAppState extends State<MyApp> {
   bool _isMealFavorite(String id) {
     return _favoriteMeals.any((meal) => meal.id == id);
   }
-  
 
   @override
   Widget build(BuildContext context) {
@@ -113,8 +112,9 @@ class _MyAppState extends State<MyApp> {
               availableMeals: _availableMeals,
             ),
         MealDetailScreen.routeName: (context) => MealDetailScreen(
-          toggleFavorite: _toggleFavorites,
-          isMealFavorite: _isMealFavorite,),
+              toggleFavorite: _toggleFavorites,
+              isMealFavorite: _isMealFavorite,
+            ),
         FiltersScreen.routeName: (context) => FiltersScreen(
               currentFilters: _filters,
               saveFileter: _setFileter,
